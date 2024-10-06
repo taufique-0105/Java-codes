@@ -16,7 +16,7 @@ So if we keep subtracting repeatedly the larger of two, we end up with GCD.
 Now instead of subtraction, if we divide the larger number, the algorithm stops when we find the remainder 0.
 */
 
-import java.util.Scanner;
+import java.util.*;
 public class euclideanProblem {
     public static void main(String[] args) {
         System.out.println("Enter two numbers to find the GCD");
@@ -26,6 +26,7 @@ public class euclideanProblem {
         b = sc.nextInt();
         int result = GCD(a,b);
         System.out.println("The GCD is " + result);
+        sc.close();
     }
     public static int GCD(int a, int b) {
         if (a == 0) {
