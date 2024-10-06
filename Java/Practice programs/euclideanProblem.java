@@ -19,13 +19,15 @@ Now instead of subtraction, if we divide the larger number, the algorithm stops 
 import java.util.*;
 public class euclideanProblem {
     public static void main(String[] args) {
-        System.out.println("Enter two numbers to find the GCD");
+        System.out.println("Enter two numbers to find the GCD and LCM:");
         int a,b;
         Scanner sc = new Scanner(System.in);
         a= sc.nextInt();
         b = sc.nextInt();
         int result = GCD(a,b);
         System.out.println("The GCD is " + result);
+        int lcm = LCM(a, b);
+        System.out.println("LCM is "+lcm);
         sc.close();
     }
     public static int GCD(int a, int b) {
@@ -36,5 +38,8 @@ public class euclideanProblem {
         } else {
             return GCD(b, a % b);
         }
+    }
+    public static int LCM(int a, int b){
+        return (a*b)/GCD(a,b);
     }
 }
